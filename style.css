@@ -4,13 +4,14 @@
 }
 nav.spotify {
     background-color:#1DB954;
-    height:15vh;
-}
-
-p.title {
-    font-size:4.5vw;
+    height:10vh;
 }
 
 .spot {
     color:#1DB954;
+}
+
+div.score {
+    border: solid #1DB954 5px;
+    border-radius:5px;
 }
