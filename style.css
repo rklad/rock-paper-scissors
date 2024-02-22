@@ -12,6 +12,11 @@ nav.spotify {
 }
 
 div.score {
+    border: solid #1DB954 3px;
+    border-radius:5px;
+}
+
+.score {
     border: solid #1DB954 5px;
     border-radius:5px;
 }

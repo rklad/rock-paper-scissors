@@ -20,63 +20,98 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg spotify">
         <div class="container-fluid text-center justify-content-center">
-            <h1 class="text-black fw-bold">Kendrick, Drake, Cole</h1></div>
+            <h1 class="text-black fw-bold">Kendrick, Drake, Cole</h1>
+        </div>
     </nav>
     <!-- end of nav -->
-<div class="container-fluid ">
-    <div class="row text-center justify-content-center ">
-        <div class="col-8">
-            <h6 class="spot fw-bold mt-3">Welcome (username) to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5! Good Luck!</h6>
+    <div class="container-fluid ">
+        <div class="row text-center justify-content-center ">
+            <div class="col-8">
+                <h6 class="spot fw-bold mt-3">Welcome (username) to Kendrick, Drake, Cole, a HipHop version of Rock
+                    Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a
+                    best-of-5! Good Luck!</h6>
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-5 justify-content-center text-center align-items-center d-flex"> <!-- user and computer choices text-->
-        <div class="col-6">
-            <div>
-                <h1 class="spot fw-bold"><ins>(username)'s Choice:</ins></h1>
+        <div class="row mt-5 text-center align-items-center d-flex"> <!-- user and computer choices text-->
+            <div class="col-6">
+                <div>
+                    <h1 class="spot fw-bold"><ins>(username)'s Choice:</ins></h1>
+                </div>
             </div>
-            <div>
-                <img src="https://picsum.photos/id/237/200/300" alt="">
-            </div>
-        </div>
-        <div class="col-6">
-            <div>
-                <h1 class="spot fw-bold"><ins>Computer's Choice:</ins></h1>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/237/200/300" alt="">
+                <div class="col-6">
+                    <div>
+                        <h1 class="spot fw-bold"><ins>Computer's Choice:</ins></h1>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- buttons for options for user -->
-    <div class="row mt-5 justify-content-center d-flex">
-        <div class="col-lg-4 col-12">
-            <h3 class="text-center spot">Select one of the musicians below!</h3>
-        </div>
-    </div>
-
-    <div class="row mt-2 justify-content-center d-flex">
-        <div class="col-8 justify-content-around px-5 d-flex">
-            <img src="https://picsum.photos/id/237/100/300" alt="">
-            <img src="https://picsum.photos/id/237/100/300" alt="">
-            <img src="https://picsum.photos/id/237/100/300" alt="">
-        </div>
-    </div>
-
-    <!-- scoreboard-->
-    <div class="row text-center justify-content-center mt-5">
-        <div class="col-lg-8 col-12 score">
-            <h1 class="text-center spot"><ins>Score</ins></h1>
-            <div class="row justify-content-between">
-             <div class="col-md-6 col-4 text-center"><h2 class="spot">(username)</h2></div>
-             <div class="col-md-6 col-4 text-center"><h2 class="spot">Computer</h2></div>   
+        <div class="row text-center align-items-center justify-content-center d-flex">
+            <div class="col-6 align-items-center justify-content-center d-flex">
+                <div>
+                    <img class="score d-sm-none img-fluid" src="https://picsum.photos/id/237/175/300" alt="">
+                    <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick.webp" alt="">
+                </div>
             </div>
-            
+
+            <div class="col-6 align-items-center justify-content-center d-flex">
+                <div>
+                    <img class="score d-sm-none img-fluid" src="https://picsum.photos/id/237/175/300" alt="">
+                    <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick.webp" alt="">
+                </div>
+            </div>
         </div>
-        
+
+        <!-- buttons for options for user -->
+        <div class="row mt-5 justify-content-center d-flex">
+            <div class="col-lg-4 col-12">
+                <h3 class="text-center spot fw-bold">Select one of the musicians below!</h3>
+            </div>
+        </div>
+
+        <div class="row mt-2 justify-content-center d-flex">
+            <div class="col-8 justify-content-around px-5 d-flex">
+                <div class="col-md-4 btn">
+                    <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick2.webp" alt="">
+                    <img class="score d-sm-none" src="imgs/kendrick3.webp" alt="">
+                </div>
+                <div class="col-md-4 btn">
+                    <img class="score d-none d-sm-block img-fluid" src="imgs/drake.webp" alt="">
+                    <img class="score d-sm-none" src="https://picsum.photos/id/237/100/200" alt="">
+                </div>
+                <div class="col-md-4 btn">
+                    <img class="score d-none d-sm-block img-fluid" src="imgs/cole.webp" alt="">
+                    <img class="score d-sm-none" src="https://picsum.photos/id/237/100/200" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- scoreboard-->
+        <div class="row text-center justify-content-center mt-3">
+            <div class="col-lg-6 col-12 score">
+                <h1 class="text-center spot"><ins>Score</ins></h1>
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-4 text-center">
+                        <h2 class="spot">(username)</h2>
+                    </div>
+                    <div class="col-md-6 col-4 text-center">
+                        <h2 class="spot">Computer</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-4 text-center my-3">
+                        <h1 class="spot">2</h1>
+                    </div>
+                    <div class="col-md-6 col-4 text-center my-3">
+                        <h1 class="spot">0</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
-</div>
 
 
 
@@ -96,7 +131,7 @@
         <!-- Grid container -->
         <div class="container p-4 pb-0 foot spotify">
             <!-- Section: Social media -->
-            <section >
+            <section>
                 <!-- Google -->
                 <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;"
                     href="mailto:525rkladerman@frhsd.com" role="button"><i class="fab fa-google"></i></a>
@@ -114,7 +149,8 @@
 
             <h3 class="text-black fw-bold">Created by Randy Kladerman</h3>
             <h3><a class="text-black fw-bold" href="mailto:525rkladerman@frhsd.com">Contact Me</a></h3>
-            <h3><a class="text-black fw-bold" href="https://rklad.github.io/gallery/">Check out some of my other websites!</a>
+            <h3><a class="text-black fw-bold" href="https://rklad.github.io/gallery/">Check out some of my other
+                    websites!</a>
             </h3>
         </div>
         <!-- Copyright -->
