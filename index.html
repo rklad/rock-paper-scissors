@@ -27,7 +27,7 @@
     <div class="container-fluid ">
         <div class="row text-center justify-content-center ">
             <div class="col-8">
-                <h6 class="spot fw-bold mt-3">Welcome (username) to Kendrick, Drake, Cole, a HipHop version of Rock
+                <h6 class="spot fw-bold mt-3" id="username1">Welcome (username) to Kendrick, Drake, Cole, a HipHop version of Rock
                     Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a
                     best-of-5! Good Luck!</h6>
             </div>
@@ -36,7 +36,7 @@
         <div class="row mt-5 text-center align-items-center d-flex"> <!-- user and computer choices text-->
             <div class="col-6">
                 <div>
-                    <h1 class="spot fw-bold"><ins>(username)'s Choice:</ins></h1>
+                    <h1 class="spot fw-bold" id="username2"><ins>(username)'s Choice:</ins></h1>
                 </div>
             </div>
                 <div class="col-6">
@@ -50,14 +50,14 @@
         <div class="row text-center align-items-center justify-content-center d-flex">
             <div class="col-6 align-items-center justify-content-center d-flex">
                 <div>
-                    <img class="score d-sm-none img-fluid" src="https://picsum.photos/id/237/175/300" alt="">
-                    <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick.webp" alt="">
+                    <img class="score d-sm-none img-fluid" id="kendrick1" src="imgs/kendrick4.jpg" alt=""> <!--smaller image to display choices-->
+                    <img class="score d-none d-sm-block img-fluid" id="kendrick" src="imgs/kendrick.webp" alt="">
                 </div>
             </div>
 
             <div class="col-6 align-items-center justify-content-center d-flex">
                 <div>
-                    <img class="score d-sm-none img-fluid" src="https://picsum.photos/id/237/175/300" alt="">
+                    <img class="score d-sm-none img-fluid" src="imgs/kendrick4.jpg" alt=""> <!--smaller image to display choices-->
                     <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick.webp" alt="">
                 </div>
             </div>
@@ -73,16 +73,16 @@
         <div class="row mt-2 justify-content-center d-flex">
             <div class="col-8 justify-content-around px-5 d-flex">
                 <div class="col-md-4 btn">
-                    <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick2.webp" alt="">
-                    <img class="score d-sm-none" src="imgs/kendrick3.webp" alt="">
+                    <img class="score d-none d-sm-block img-fluid" id="kendrick2" src="imgs/kendrick2.webp" onclick="playRound('kendrick')">
+                    <img class="score d-sm-none" id="kendick" src="imgs/kendrick3.webp" onclick="playRound('kendrick')"> <!-- smaller img for buttons-->
                 </div>
                 <div class="col-md-4 btn">
-                    <img class="score d-none d-sm-block img-fluid" src="imgs/drake.webp" alt="">
-                    <img class="score d-sm-none" src="https://picsum.photos/id/237/100/200" alt="">
+                    <img class="score d-none d-sm-block img-fluid" id="drake2" src="imgs/drake.webp" onclick="playRound('drake')">
+                    <img class="score d-sm-none" id="drake" src="imgs/drake2.webp" onclick="playRound('drake')"> <!-- smaller img for buttons-->
                 </div>
                 <div class="col-md-4 btn">
-                    <img class="score d-none d-sm-block img-fluid" src="imgs/cole.webp" alt="">
-                    <img class="score d-sm-none" src="https://picsum.photos/id/237/100/200" alt="">
+                    <img class="score d-none d-sm-block img-fluid" id="cole2" src="imgs/cole.webp" onclick="playRound('cole')">
+                    <img class="score d-sm-none" id="cole" src="imgs/cole2.jpg" onclick="playRound('cole')"> <!-- smaller img for buttons-->
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                 <h1 class="text-center spot"><ins>Score</ins></h1>
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-4 text-center">
-                        <h2 class="spot">(username)</h2>
+                        <h2 class="spot" id="username3">(username)</h2>
                     </div>
                     <div class="col-md-6 col-4 text-center">
                         <h2 class="spot">Computer</h2>
