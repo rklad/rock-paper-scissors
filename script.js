@@ -1,5 +1,6 @@
 Window.onload = changeUsername();
 
+//GETTING USERNAME
 function changeUsername(element) {
   var username = prompt("Enter your username:");
   document.getElementById("username1").innerText = "Welcome " + username + " to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5! Good Luck!";
@@ -12,7 +13,10 @@ function changeUsername(element) {
 function playGame(userChoice) {
   // get user's choice
 
-// display user choice
+
+
+
+  // display user choice
 
 
 }
@@ -21,26 +25,40 @@ function playGame(userChoice) {
 
 
 // get computer choice
+
+let compChoice = getComputerChoice()
+
   function getComputerChoice() {
-    //getting computer's choice
-    const randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
       case 0:
         return "kendrick";
+        break;
       case 1:
         return "drake";
+        break;
       case 2:
         return "cole";
-    }
+        break;
+    } 
 
     // display computer choice
-    if (randomNumber === 'kendrick') {
+    if (compChoice === 'kendrick') {
         document.getElementById('image2').src = 'imgs/kendrick.webp'
-    } else if (randomNumber === 'drake') {
-        document.getElementById('image 2').src = 'imgs/drake3.webp'
-    } else if (randomNumber === 'cole') {
+    } else if (compChoice === 'drake') {
+        document.getElementById('image2').src = 'imgs/drake3.webp'
+    } else if (compChoice === 'cole') {
         document.getElementById('image2').src = 'imgs/cole3.webp'
     }
+
+    // FOR SMALL IMGS
+    if (randomNumber === 'kendrick') {
+      document.getElementById('smallimage2').src = 'imgs/kendrick4.jpg'
+  } else if (randomNumber === 'drake') {
+      document.getElementById('smallimage2').src = 'imgs/drake4.png'
+  } else if (randomNumber === 'cole') {
+      document.getElementById('smallimage2').src = 'imgs/cole4.jpg'
+  }
 
     //need to display computer choice
   }
