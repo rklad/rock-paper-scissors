@@ -27,10 +27,10 @@
     <div class="container-fluid ">
         <div class="row text-center justify-content-center ">
             <div class="col-8">
-                <h6 class="spot fw-bold mt-3" id="username1">Welcome (username) to Kendrick, Drake, Cole, a HipHop
+                <h6 class="spot mt-3 fw-bold" id="username1">Welcome (username) to Kendrick, Drake, Cole, a HipHop
                     version of Rock
                     Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a
-                    best-of-5! Good Luck!</h6>
+                    best-of-5! Kendrick beats Drake, Drake beats Cole, and Cole beats Kendrick. Good Luck!</h6>
             </div>
         </div>
 
@@ -49,24 +49,29 @@
     </div>
 
     <!-- DISPLAYING USER AND COMP CHOICES -->
-    <div class="row text-center align-items-center justify-content-center d-flex">
+    <div class="row text-center align-items-center justify-content-center d-flex mb-5">
         <div class="col-6 align-items-center justify-content-center d-flex">
             <div id="userchoice">
-                <img class="score d-sm-none img-fluid" id="smallimage1" src="imgs/kendrick4.jpg" alt="">
-                <!--smaller image to display choices-->
-                <img class="score d-none d-sm-block img-fluid" id="image1" src="imgs/kendrick.webp" alt="">
+                <img class="score d-sm-none img-fluid" id="smalluser" src="imgs/kendrick4.jpg" alt=""><!--smaller image to display choices-->
+                <img class="score d-none d-sm-block img-fluid" id="user" src="imgs/kendrick.webp" alt="">
             </div>
         </div>
 
         <div class="col-6 align-items-center justify-content-center d-flex">
             <div id="compchoice">
-                <img class="score d-sm-none img-fluid" id="smallimage2" src="imgs/kendrick4.jpg" alt="">
+                <img class="score d-sm-none img-fluid" id="smallcomp" src="imgs/kendrick4.jpg" alt="">
                 <!--smaller image to display choices-->
-                <img class="score d-none d-sm-block img-fluid" id="image2" src="imgs/kendrick.webp" alt="">
+                <img class="score d-none d-sm-block img-fluid" id="comp" src="imgs/kendrick.webp" alt="">
             </div>
         </div>
     </div>
 
+<!-- DECIDING WINNER OF EACH ROUND -->
+<div class="row justify-content-center d-flex">
+    <div class="col-12 col-md-6">
+        <h1 class="spot text-center fw-bold" id="decider"></h1>
+    </div>
+</div>
 
     <div class="row mt-5 justify-content-center d-flex">
         <div class="col-lg-4 col-12">
@@ -91,15 +96,15 @@
     <!-- BUTTONS FOR USER TO PICK CHOICE -->
     <div class="row justify-content-center d-flex">
         <div class="col-md-8 col-12 justify-content-around px-5 d-flex">
-            <div class="col-md-4 btn" onclick="playGame('kendrick')">
+            <div class="col-md-4 btn" onclick="playGame('Kendrick')">
                 <img class="score d-none d-sm-block img-fluid" src="imgs/kendrick2.webp">
                 <img class="score d-sm-none" src="imgs/kendrick3.webp"> <!-- smaller img for buttons-->
             </div>
-            <div class="col-md-4 btn" onclick="playGame('drake')">
+            <div class="col-md-4 btn" onclick="playGame('Drake')">
                 <img class="score d-none d-sm-block img-fluid" src="imgs/drake.webp">
                 <img class="score d-sm-none" src="imgs/drake2.webp"> <!-- smaller img for buttons-->
             </div>
-            <div class="col-md-4 btn" onclick="playGame('cole')">
+            <div class="col-md-4 btn" onclick="playGame('Cole')">
                 <img class="score d-none d-sm-block img-fluid" src="imgs/cole.webp">
                 <img class="score d-sm-none" src="imgs/cole2.jpg"> <!-- smaller img for buttons-->
             </div>
@@ -122,10 +127,10 @@
             </div>
             <div class="row justify-content-between">
                 <div class="col-md-6 col-4 text-center my-3">
-                    <h1 class="spot">0</h1>
+                    <h1 class="spot" id="userscoreboard">0</h1>
                 </div>
                 <div class="col-md-6 col-4 text-center my-3">
-                    <h1 class="spot">0</h1>
+                    <h1 class="spot" id="compscoreboard">0</h1>
                 </div>
             </div>
 
