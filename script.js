@@ -3,7 +3,7 @@ Window.onload = changeUsername();
 //GETTING USERNAME
 function changeUsername(element) {
   var username = prompt("Enter your username:");
-  document.getElementById("username1").innerText = "Welcome " + username + " to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5! Good Luck!";
+  document.getElementById("username1").innerText = "Welcome " + username + " to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5! Kendrick beats Drake, Drake beats Cole, and Cole beats Kendrick. Good Luck!";
   document.getElementById("username2").innerText = username + "'s choice";
   document.getElementById("username3").innerText = username;
   // add a 'please enter your name' for null
