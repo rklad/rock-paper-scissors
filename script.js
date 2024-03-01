@@ -1,3 +1,6 @@
+let userScore = 0;
+let compScore = 0;
+
 //GETTING USERNAME
   let username = prompt("Enter your username:");
   let names = `${username}`
@@ -6,8 +9,6 @@
   Kendrick beats Drake, Drake beats Cole, and Cole beats Kendrick. Good Luck!`;
   document.getElementById("username2").innerText = `${names}'s choice`;
   document.getElementById("username3").innerText = `${names}`;
-  let userScore = 0;
-  let compScore = 0;
 
 // THE ENTIRE FUNCTION
 function playGame(userChoice) {
@@ -33,7 +34,7 @@ function playGame(userChoice) {
   // get user's choice
   // WHEN USER CHOOSES KENDRICK & COMP CHOOSES DRAKE
 if (userChoice === 'Kendrick' && compChoice === 'Drake') {
-  userScore();
+  updateUserScore();
   document.getElementById('user').src = 'imgs/kendrick.webp'; 
   document.getElementById('comp').src = 'imgs/drake3.webp';
   //FOR SMALL IMGS
@@ -45,7 +46,7 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
 // WHEN USER CHOOSES KENDRICK & COMP CHOOSES COLE
   else if (userChoice === 'Kendrick' && compChoice === 'Cole') {
-  compScore();
+  updateCompScore();
   document.getElementById('user').src = 'imgs/kendrick.webp'; 
   document.getElementById('comp').src = 'imgs/cole3.webp';
   //FOR SMALL IMGS
@@ -79,7 +80,7 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
   // WHEN USER CHOOSES DRAKE AND COMP CHOOSES KENDRICK
   else if (userChoice === 'Drake' && compChoice === 'Kendrick') {
-  compScore();  
+  updateCompScore();  
   document.getElementById('user').src = 'imgs/drake3.webp'; 
   document.getElementById('comp').src = 'imgs/kendrick.webp';
   //FOR SMALL IMGS
@@ -91,7 +92,7 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
   // WHEN USER CHOOSES DRAKE AND COMP CHOOSES COLE
   else if (userChoice === 'Drake' && compChoice === 'Cole') {
-  userScore();
+  updateUserScore();
   document.getElementById('user').src = 'imgs/drake3.webp'; 
   document.getElementById('comp').src = 'imgs/cole3.webp';
   //FOR SMALL IMGS
@@ -114,7 +115,7 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
   // WHEN USER CHOOSES COLE AND COMP CHOOSES KENDRICK
   else if (userChoice === 'Cole' && compChoice === 'Kendrick') {
-    userScore();
+    updateUserScore()
     document.getElementById('user').src = 'imgs/cole3.webp'; 
     document.getElementById('comp').src = 'imgs/kendrick.webp';
     //FOR SMALL IMGS
@@ -126,7 +127,7 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
   // WHEN USER CHOOSES COLE AND COMP CHOOSES DRAKE 
   else if (userChoice === 'Cole' && compChoice === 'Drake') {
-    compScore();
+    updateCompScore();
     document.getElementById('user').src = 'imgs/cole3.webp'; 
     document.getElementById('comp').src = 'imgs/drake3.webp';
     //FOR SMALL IMGS
@@ -138,14 +139,15 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
 
 
   //DETERMINING USER SCORE 
-  function userScore() {
+  function updateUserScore() {
     userScore++;
-    document.getElementById('userscoreboard').innerText = userScore
+    document.getElementById('userScoreboard').innerText = userScore;
   }
   //DETERMINING COMP SCORE
-  function compScore() {
+  function updateCompScore() {
     compScore++;
-    document.getElementById('compscoreboard').innerText = compScore
+    let compScoreString = compScore.toString();
+    document.getElementById('compScoreboard').innerText = compScore;
   }
 }
 
