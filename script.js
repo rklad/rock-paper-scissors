@@ -4,9 +4,7 @@ let compScore = 0;
 //GETTING USERNAME
   let username = prompt("Enter your username:");
   let names = `${username}`
-  document.getElementById("username1").innerText = `Welcome  ${names} to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5! 
-  
-  Kendrick beats Drake, Drake beats Cole, and Cole beats Kendrick. Good Luck!`;
+  document.getElementById("username1").innerText = `Welcome  ${names} to Kendrick, Drake, Cole, a HipHop version of Rock Paper Scissors! Select one of Kendrick Lamar, Drake, or J Cole and try to beat the computer in a best-of-5!`;
   document.getElementById("username2").innerText = `${names}'s choice`;
   document.getElementById("username3").innerText = `${names}`;
 
@@ -149,6 +147,34 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
     let compScoreString = compScore.toString();
     document.getElementById('compScoreboard').innerText = compScore;
   }
+
+
+ 
+//ARRAYS FOR DIFFERENT MESSAGES AFTER GAME IS OVER
+  let congratsArrayWin = [
+    `Congrats ${names}! You Win!!!!!`,
+    'You\'re just better',
+    'Congrats for not letting computers beat you'
+  ]
+
+  let quotesArrayLose = [
+    'You Lose :( Try Again!',
+    'Damn you trash',
+    'Maybe next time you\'ll win',
+    `Lock in ${names} I know you're going to win this next one`
+  ]
+
+  let randNumWin = Math.floor(Math.random() * congratsArrayWin.length) //RANDOMIZES USER WIN MESSAGES
+  let randNumLose = Math.floor(Math.random() * quotesArrayLose.length) //RANDOMIZES USER LOSE MESSAGES
+ //CONGRATULATES USER FOR WINNING GAME
+  if (userScore === 3) {
+    document.getElementById('decider').innerText = congratsArrayWin[randNumWin]
+  } else if (compScore === 3) {
+    document.getElementById('decider').innerText = quotesArrayLose[randNumLose]
+  }
+
 }
+
+
 
 
