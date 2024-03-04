@@ -68,14 +68,20 @@
     </div>
 
 <!-- DECIDING WINNER OF EACH ROUND -->
-<div class="row justify-content-center d-flex">
+<div class="row justify-content-center d-flex mb-5">
     <div class="col-12 col-md-6">
         <h1 class="spot text-center fw-bold" id="decider"></h1>
     </div>
+    <div class="row justify-content-center d-flex">
+        <div class="col-12 col-md-6">
+            <h1 class="spot text-center fw-bold d-none" id="decidewinner"></h1>
+        </div>
 </div>
 <div class="row justify-content-center d-flex">
     <div class="col-12 col-md-6">
-        <div class="text-center spotyi" id="reset"></div>
+        <div class="text-center spoti d-none" id="reset">
+            <h1 class="text-white fw-bold btn" onclick="restartGame()">RESTART GAME</h1>
+        </div>
     </div>
 </div>
 
@@ -119,7 +125,7 @@
 
 
 
-    <!-- scoreboard-->
+    <!-- SCOREBOARD-->
     <div class="row text-center justify-content-center mt-3">
         <div class="col-lg-6 col-12 score">
             <h1 class="text-center spot"><ins>Score</ins></h1>

@@ -168,13 +168,28 @@ if (userChoice === 'Kendrick' && compChoice === 'Drake') {
   let randNumLose = Math.floor(Math.random() * quotesArrayLose.length) //RANDOMIZES USER LOSE MESSAGES
  //CONGRATULATES USER FOR WINNING GAME
   if (userScore === 3) {
-    document.getElementById('decider').innerText = congratsArrayWin[randNumWin]
+    document.getElementById('decidewinner').innerText = congratsArrayWin[randNumWin]
+    document.getElementById('decidewinner').classList.remove('d-none')
+    document.getElementById('reset').classList.remove('d-none')
   } else if (compScore === 3) {
-    document.getElementById('decider').innerText = quotesArrayLose[randNumLose]
+    document.getElementById('decidewinner').innerText = quotesArrayLose[randNumLose]
+    document.getElementById('decidewinner').classList.remove('d-none')
+    document.getElementById('reset').classList.remove('d-none')
   }
 
 }
 
+function resetGame() {
+  clearInterval(limitScore)
+}
 
+let limitScore = setInterval(resetGame(), 1000)
 
-
+function restartGame() {
+  userScore = 0;
+  compScore = 0;
+  document.getElementById('reset').classList.add('d-none')
+  document.getElementById('decidewinner').classList.add('d-none')
+  document.getElementById('userScoreboard').innerText = '0'
+  document.getElementById('compScoreboard').innerText = '0'
+}
